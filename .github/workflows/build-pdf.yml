@@ -16,13 +16,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install tectonic
-        uses: wtfjoke/setup-tectonic@v3
+      - name: Install TeX Live
+        uses: xu-cheng/latex-action@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Compile LaTeX
-        run: tectonic Lebenslauf.tex
+          root_file: Lebenslauf.tex
+          latexmk_use_lualatex: true
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
