@@ -1,12 +1,12 @@
 # CV - Marc Borer
 
-[![Build CV PDF](https://github.com/KarlHabsburg/cv/actions/workflows/build-pdf.yml/badge.svg)](https://github.com/KarlHabsburg/cv/actions/workflows/build-pdf.yml)
+[![Build CV PDF](https://github.com/marcborer/cv/actions/workflows/build-pdf.yml/badge.svg)](https://github.com/marcborer/cv/actions/workflows/build-pdf.yml)
 
 LaTeX CV with automated PDF builds via GitHub Actions.
 
 ## Download
 
-**[Download Latest CV (PDF)](https://github.com/KarlHabsburg/cv/releases/latest/download/Lebenslauf.pdf)**
+**[Download Latest CV (PDF)](https://github.com/marcborer/cv/releases/latest/download/Lebenslauf.pdf)**
 
 ## How It Works
 
