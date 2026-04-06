@@ -1,0 +1,42 @@
+name: Build CV PDF
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install tectonic
+        uses: wtfjoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compile LaTeX
+        run: tectonic Lebenslauf.tex
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdf
+          path: Lebenslauf.pdf
+
+      - name: Create/Update Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest CV
+          body: "Automatically built from the latest commit on main."
+          files: Lebenslauf.pdf
+          make_latest: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

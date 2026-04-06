@@ -1,0 +1,23 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Output PDF (built by CI)
+Lebenslauf.pdf
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
